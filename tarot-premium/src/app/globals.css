@@ -1,0 +1,279 @@
+@import "tailwindcss";
+
+@theme {
+  --color-void: #06060F;
+  --color-abyss: #0B0B1A;
+  --color-midnight: #111128;
+  --color-obsidian: #1A1A35;
+  --color-onyx: #252545;
+
+  --color-gold-50: #FDF8ED;
+  --color-gold-100: #F5E6C0;
+  --color-gold-200: #E8D5B5;
+  --color-gold-300: #D4B88C;
+  --color-gold-400: #C9A84C;
+  --color-gold-500: #B8942E;
+  --color-gold-600: #9A7B24;
+
+  --color-arcane-deep: #1E1B4B;
+  --color-arcane-mid: #312E81;
+  --color-arcane-glow: #6366F1;
+
+  --color-ritual-purple: #7C3AED;
+  --color-card-back: #1A1040;
+
+  --font-display: "Cinzel Decorative", serif;
+  --font-heading: "Outfit", sans-serif;
+  --font-body: "Source Serif 4", serif;
+  --font-ui: "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --animate-shimmer: shimmer 3s ease-in-out infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-glow-pulse: glow-pulse 4s ease-in-out infinite;
+  --animate-fade-up: fade-up 0.6s ease-out;
+  --animate-spin-slow: spin 20s linear infinite;
+  --animate-spin-reverse: spin-reverse 30s linear infinite;
+  --animate-bounce-gentle: bounce-gentle 2s ease-in-out infinite;
+  --animate-aurora: aurora 8s ease-in-out infinite;
+  --animate-gold-sweep: gold-sweep 4s ease-in-out infinite;
+  --animate-holographic: holographic 6s linear infinite;
+  --animate-breathe: breathe 4s ease-in-out infinite;
+  --animate-levitate: levitate 5s ease-in-out infinite;
+
+  @keyframes shimmer {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+  }
+  @keyframes glow-pulse {
+    0%, 100% { box-shadow: 0 0 20px rgba(201, 168, 76, 0.1); }
+    50% { box-shadow: 0 0 40px rgba(201, 168, 76, 0.25); }
+  }
+  @keyframes fade-up {
+    0% { opacity: 0; transform: translateY(16px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes bounce-gentle {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+  @keyframes spin-reverse {
+    from { transform: rotate(360deg); }
+    to { transform: rotate(0deg); }
+  }
+  @keyframes aurora {
+    0%, 100% { background-position: 0% 50%; opacity: 0.3; }
+    25% { background-position: 50% 0%; opacity: 0.5; }
+    50% { background-position: 100% 50%; opacity: 0.3; }
+    75% { background-position: 50% 100%; opacity: 0.5; }
+  }
+  @keyframes gold-sweep {
+    0% { transform: translateX(-150%) skewX(-20deg); }
+    100% { transform: translateX(350%) skewX(-20deg); }
+  }
+  @keyframes holographic {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  @keyframes breathe {
+    0%, 100% { opacity: 0.15; transform: scale(1); }
+    50% { opacity: 0.25; transform: scale(1.02); }
+  }
+  @keyframes levitate {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-12px) rotate(1deg); }
+    75% { transform: translateY(-6px) rotate(-1deg); }
+  }
+  @keyframes card-float-orbit {
+    0% { transform: rotate(0deg) translateX(var(--orbit-radius, 200px)) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(var(--orbit-radius, 200px)) rotate(-360deg); }
+  }
+}
+
+/* Base */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--color-void);
+  color: var(--color-gold-200);
+  font-family: var(--font-body);
+}
+
+::selection {
+  background-color: rgba(201, 168, 76, 0.3);
+  color: var(--color-gold-50);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(201, 168, 76, 0.2); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(201, 168, 76, 0.4); }
+
+/* 3D card perspective */
+.perspective-container {
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
+.card-face {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.card-face-back {
+  transform: rotateY(180deg);
+}
+
+/* Gold text gradient */
+.text-gold-gradient {
+  background: linear-gradient(135deg, var(--color-gold-200), var(--color-gold-400), var(--color-gold-200));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animated gold gradient text */
+.text-gold-gradient-animated {
+  background: linear-gradient(
+    90deg,
+    var(--color-gold-300) 0%,
+    var(--color-gold-100) 25%,
+    var(--color-gold-400) 50%,
+    var(--color-gold-100) 75%,
+    var(--color-gold-300) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: holographic 4s linear infinite;
+}
+
+/* Glass morphism */
+.glass {
+  background: rgba(11, 11, 26, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(201, 168, 76, 0.08);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.glass-card {
+  background: rgba(17, 17, 40, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(201, 168, 76, 0.1);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Holographic card back sheen */
+.holographic-sheen {
+  background: linear-gradient(
+    135deg,
+    rgba(201, 168, 76, 0.0) 0%,
+    rgba(201, 168, 76, 0.08) 20%,
+    rgba(99, 102, 241, 0.06) 40%,
+    rgba(124, 58, 237, 0.06) 60%,
+    rgba(201, 168, 76, 0.08) 80%,
+    rgba(201, 168, 76, 0.0) 100%
+  );
+  background-size: 300% 300%;
+  animation: holographic 6s linear infinite;
+}
+
+/* Gold sweep button effect */
+.gold-sweep-overlay {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: inherit;
+}
+.gold-sweep-overlay::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+  animation: gold-sweep 4s ease-in-out infinite;
+}
+
+/* Aurora background glow */
+.aurora-glow {
+  background: linear-gradient(
+    45deg,
+    rgba(30, 27, 75, 0.4),
+    rgba(99, 102, 241, 0.1),
+    rgba(201, 168, 76, 0.08),
+    rgba(124, 58, 237, 0.1),
+    rgba(30, 27, 75, 0.4)
+  );
+  background-size: 400% 400%;
+  animation: aurora 8s ease-in-out infinite;
+}
+
+/* Magic circle breathing glow */
+.magic-glow {
+  filter: drop-shadow(0 0 8px rgba(201, 168, 76, 0.2));
+  animation: breathe 4s ease-in-out infinite;
+}
+
+/* Light ray burst on card reveal */
+.light-ray-burst {
+  position: absolute;
+  inset: -50%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    rgba(201, 168, 76, 0.15) 10deg,
+    transparent 20deg,
+    transparent 40deg,
+    rgba(201, 168, 76, 0.1) 50deg,
+    transparent 60deg,
+    transparent 90deg,
+    rgba(201, 168, 76, 0.15) 100deg,
+    transparent 110deg,
+    transparent 140deg,
+    rgba(201, 168, 76, 0.1) 150deg,
+    transparent 160deg,
+    transparent 180deg,
+    rgba(201, 168, 76, 0.15) 190deg,
+    transparent 200deg,
+    transparent 230deg,
+    rgba(201, 168, 76, 0.1) 240deg,
+    transparent 250deg,
+    transparent 280deg,
+    rgba(201, 168, 76, 0.15) 290deg,
+    transparent 300deg,
+    transparent 340deg,
+    rgba(201, 168, 76, 0.1) 350deg,
+    transparent 360deg
+  );
+  animation: spin 8s linear infinite;
+  opacity: 0;
+}
+
+.light-ray-burst.active {
+  opacity: 1;
+  transition: opacity 0.6s ease-out;
+}
+
+/* Orbit animation for floating cards */
+.orbit-card {
+  animation: card-float-orbit var(--orbit-duration, 20s) linear infinite;
+}
+
+/* Card hover 3D tilt (applied via JS) */
+.card-tilt {
+  transition: transform 0.1s ease-out;
+  will-change: transform;
+}

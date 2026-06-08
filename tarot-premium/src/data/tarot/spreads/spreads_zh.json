@@ -1,0 +1,126 @@
+{
+  "single_card": {
+    "id": "single_card",
+    "name": "单张牌阵",
+    "description": "快速洞察或每日指引，仅抽取一张牌",
+    "card_count": 1,
+    "positions": [
+      {
+        "name": "启示",
+        "meaning": "对你所问之事的主要洞察、指引或能量"
+      }
+    ],
+    "source": "tarot-mcp",
+    "_locale": "zh"
+  },
+  "three_card": {
+    "id": "three_card",
+    "name": "三张牌阵",
+    "description": "经典三段式：过去/现在/未来，或局势/行动/结果",
+    "card_count": 3,
+    "positions": [
+      {
+        "name": "过去/基础",
+        "meaning": "是什么导致了当前的局面，或这件事的基础是什么"
+      },
+      {
+        "name": "现在/行动",
+        "meaning": "当前的状态，或应该采取的行动"
+      },
+      {
+        "name": "未来/发展",
+        "meaning": "可能的结果或未来发展"
+      }
+    ],
+    "source": "tarot-mcp",
+    "_locale": "zh"
+  },
+  "celtic_cross": {
+    "id": "celtic_cross",
+    "name": "凯尔特十字",
+    "description": "最经典的十张牌深度牌阵，全面解析局势",
+    "card_count": 10,
+    "positions": [
+      {
+        "name": "当前处境",
+        "meaning": "事情的核心，你目前的处境或心态"
+      },
+      {
+        "name": "挑战/阻碍",
+        "meaning": "你面临的挑战，或此刻阻碍你的力量"
+      },
+      {
+        "name": "远因/根基",
+        "meaning": "局面的根基，深远过去的影响"
+      },
+      {
+        "name": "近因",
+        "meaning": "近期发生、正在消退的事件或影响"
+      },
+      {
+        "name": "可能的结果",
+        "meaning": "如果现状继续，一个可能的结果"
+      },
+      {
+        "name": "近期发展",
+        "meaning": "不久的将来即将到来的是什么"
+      },
+      {
+        "name": "你的态度",
+        "meaning": "你对局势的态度，你看待自己的方式"
+      },
+      {
+        "name": "外部影响",
+        "meaning": "他人如何看待你，或影响局势的外部因素"
+      },
+      {
+        "name": "希望与恐惧",
+        "meaning": "你内心的感受、希望和恐惧"
+      },
+      {
+        "name": "最终结果",
+        "meaning": "最终的结果，所有影响的汇聚"
+      }
+    ],
+    "source": "tarot-mcp",
+    "_locale": "zh"
+  },
+  "relationship_cross": {
+    "id": "relationship_cross",
+    "name": "关系十字",
+    "description": "七张牌的人际关系动态分析",
+    "card_count": 7,
+    "positions": [
+      {
+        "name": "你",
+        "meaning": "你在这段关系中的角色、感受和贡献"
+      },
+      {
+        "name": "对方",
+        "meaning": "对方在关系中的角色、感受和贡献"
+      },
+      {
+        "name": "关系本身",
+        "meaning": "关系本身的当前状态和动态"
+      },
+      {
+        "name": "连接你们的",
+        "meaning": "共同的根基、共享的价值观和将你们拉近的"
+      },
+      {
+        "name": "分离你们的",
+        "meaning": "差异、冲突和制造紧张的因素"
+      },
+      {
+        "name": "建议",
+        "meaning": "改善和滋养这段关系的指引"
+      },
+      {
+        "name": "未来潜力",
+        "meaning": "关系的走向和潜在结果"
+      }
+    ],
+    "source": "tarot-mcp",
+    "_locale": "zh"
+  }
+}

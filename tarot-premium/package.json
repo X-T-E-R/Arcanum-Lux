@@ -1,0 +1,34 @@
+{
+  "name": "arcanum-lux",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "npx serve@latest out",
+    "preview": "npx serve@latest out",
+    "lint": "next lint",
+    "assets:optimize": "node scripts/optimize-assets.mjs --prune-public-originals"
+  },
+  "dependencies": {
+    "@phosphor-icons/react": "^2.1.7",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.18.0",
+    "next": "^15.3.3",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "zustand": "^5.0.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.4",
+    "@types/node": "^22.15.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "eslint": "^9.25.0",
+    "eslint-config-next": "^15.3.3",
+    "postcss": "^8.5.3",
+    "sharp": "^0.34.5",
+    "tailwindcss": "^4.1.4",
+    "typescript": "^5.8.3"
+  }
+}

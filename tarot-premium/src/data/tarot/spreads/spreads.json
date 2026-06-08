@@ -1,0 +1,122 @@
+{
+  "single_card": {
+    "id": "single_card",
+    "name": "Single Card",
+    "description": "A simple one-card draw for quick insight or daily guidance",
+    "card_count": 1,
+    "positions": [
+      {
+        "name": "The Message",
+        "meaning": "The main insight, guidance, or energy for your question"
+      }
+    ],
+    "source": "tarot-mcp"
+  },
+  "three_card": {
+    "id": "three_card",
+    "name": "Three Card Spread",
+    "description": "A versatile three-card spread that can represent past/present/future, situation/action/outcome, or mind/body/spirit",
+    "card_count": 3,
+    "positions": [
+      {
+        "name": "Past/Situation",
+        "meaning": "What has led to this situation or the foundation of the matter"
+      },
+      {
+        "name": "Present/Action",
+        "meaning": "The current state or what action should be taken"
+      },
+      {
+        "name": "Future/Outcome",
+        "meaning": "The likely outcome or future development"
+      }
+    ],
+    "source": "tarot-mcp"
+  },
+  "celtic_cross": {
+    "id": "celtic_cross",
+    "name": "Celtic Cross",
+    "description": "The most famous tarot spread, providing comprehensive insight into a situation with 10 cards",
+    "card_count": 10,
+    "positions": [
+      {
+        "name": "Present Situation",
+        "meaning": "The heart of the matter, your current situation or state of mind"
+      },
+      {
+        "name": "Challenge/Cross",
+        "meaning": "The challenge you face or what crosses you in this situation"
+      },
+      {
+        "name": "Distant Past/Foundation",
+        "meaning": "The foundation of the situation, distant past influences"
+      },
+      {
+        "name": "Recent Past",
+        "meaning": "Recent events or influences that are now passing away"
+      },
+      {
+        "name": "Possible Outcome",
+        "meaning": "One possible outcome if things continue as they are"
+      },
+      {
+        "name": "Near Future",
+        "meaning": "What is approaching in the immediate future"
+      },
+      {
+        "name": "Your Approach",
+        "meaning": "Your approach to the situation, how you see yourself"
+      },
+      {
+        "name": "External Influences",
+        "meaning": "How others see you or external influences affecting the situation"
+      },
+      {
+        "name": "Hopes and Fears",
+        "meaning": "Your inner feelings, hopes, and fears about the situation"
+      },
+      {
+        "name": "Final Outcome",
+        "meaning": "The final outcome, the culmination of all influences"
+      }
+    ],
+    "source": "tarot-mcp"
+  },
+  "relationship_cross": {
+    "id": "relationship_cross",
+    "name": "Relationship Cross",
+    "description": "A 7-card spread specifically designed for examining relationships, whether romantic, friendship, or family",
+    "card_count": 7,
+    "positions": [
+      {
+        "name": "You",
+        "meaning": "Your role, feelings, and contribution to the relationship"
+      },
+      {
+        "name": "Your Partner",
+        "meaning": "Their role, feelings, and contribution to the relationship"
+      },
+      {
+        "name": "The Relationship",
+        "meaning": "The current state and dynamic of the relationship itself"
+      },
+      {
+        "name": "What Unites You",
+        "meaning": "Common ground, shared values, and what brings you together"
+      },
+      {
+        "name": "What Divides You",
+        "meaning": "Differences, conflicts, and what creates tension"
+      },
+      {
+        "name": "Advice",
+        "meaning": "Guidance for improving and nurturing the relationship"
+      },
+      {
+        "name": "Future Potential",
+        "meaning": "Where the relationship is heading and its potential outcome"
+      }
+    ],
+    "source": "tarot-mcp"
+  }
+}
